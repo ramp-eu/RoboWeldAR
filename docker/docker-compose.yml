@@ -14,6 +14,7 @@ services:
     # image: "roboweldar-3d-reconstruction:latest"
     image: roboweldar/roboweldar-3d-reconstruction
     container_name: roboweldar-3d-reconstruction
+    runtime: nvidia
     entrypoint: ["python3", "src/rest/client.py", "--host", "localhost", "--orion_cb_host", "localhost", "--orion_cb_port", "1026"]
     volumes: 
       - ./roboweldar-3d-reconstruction:/app/roboweldar-3d-reconstruction/reconstruction_data
@@ -28,6 +29,7 @@ services:
       - coordinator
     image: roboweldar/roboweldar-weld-seam-detection
     container_name: roboweldar-weld-seam-detection
+    runtime: nvidia
     # TODO: Thanos to check this dir
     volumes: 
       - ./roboweldar-weld-seam-detection:/opt/roboweldar-weld-seam-detection/welding_paths_output
