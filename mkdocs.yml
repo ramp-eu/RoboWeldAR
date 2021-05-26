@@ -6,12 +6,14 @@ site_dir: html
 markdown_extensions: [toc,fenced_code]
 use_directory_urls: false
 theme: readthedocs
-pages:
-  - Home: 'index.md'
-  - 'Getting Started' : 'getting-started.md'
-  - 'User & Programmers Manual':
-    - 'Architecture' : 'architecture.md'
-    - 'API' : 'api.md'
-    - 'User Guide': 'usermanual.md'
-  - 'Installation & Administration Manual': 
-    - 'Installation Guide': 'installationguide.md'
+nav:
+  - Home: 'README.md'
+  - User & Programmers Manual:
+    - Architecture : 'architecture.md'
+    - API : 'api.md'
+    - User Guide: 'usermanual.md'
+    - Test Examples: 'test_examples.md'
+    - Contribution Guidelines: 'contribution.md'
+  - Installation & Administration Manual: 
+    - Installation Guide: 'installationguide.md'
+    - Docker Guide: 'docker_guide.md'
